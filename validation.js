@@ -13,7 +13,7 @@ const validate = (req, res, next) => {
     return res.status(400).json({message: errors.array()[0].msg});
 }
 
-app.get('/:email', [param('email').isEmail().withMessage('이메일을 입력하세요!'), validate], (req, res, next) => {
+app.get('/:email', [param('email').isEmail().withMessage('이메일을 입력하세요!'), valsidate], (req, res, next) => {
     res.send('💌');
 });
 
